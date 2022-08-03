@@ -1,25 +1,66 @@
-#  Majority Element: Given an array nums of size n, return the majority element. The majority element is the element that appears more than ⌊n / 2⌋ times.
-# Arrays & Maths
+class Solution:
 
-def MajorityElement(A):
-    element = A[0]
-    frequency = 1
-    n = len(A)
+    # @param A : tuple of integers
 
-    for i in range(1,n):
-        if frequency == 0:
-            element = A[i]
-            frequency = 1
+    # @return an integer
 
-        elif element == A[i]:
-            frequency += 1
+    def repeatedNumber(A):
+
+        n = len(A)
+        if n == 1:
+            return A[0]
+
         else:
-            frequency -= 1
+            ele1=-1
+            ele2=-1
+            freq1, freq2 = 0, 0
 
-    return element
+            for i in range(n):
+                if ele1 == A[i]:
+                    freq1 += 1
 
+                elif ele2 == A[i]:
+                    freq2 += 1
 
+                elif (freq1 == 0):
+                    ele1 = A[i]
+                    freq1+=1
 
-A = [3, 4, 4, 8, 4, 9, 4, 3, 4]
-print(MajorityElement(A))
+                elif (freq2 == 0):
+                    ele2 = A[i]
+                    freq2+=1
 
+                else:
+                    freq1 -= 1
+                    freq2 -= 1
+
+            f1=0
+
+            f2=0
+
+            for i in A:
+
+                if i==ele1:
+
+                    f1+=1
+
+                if i==ele2:
+
+                    f2+=1
+
+            if f1 > n//3:
+
+                return ele1
+
+            if f2 > n//3:
+
+                return ele2
+
+            return -1    
+
+   # A = [1, 2, 3, 1, 1]
+   # A =  [1000441, 1000441, 1000994]
+    A = [1, 1, 1, 2, 3, 5, 7]
+    print(repeatedNumber(A))
+
+            
