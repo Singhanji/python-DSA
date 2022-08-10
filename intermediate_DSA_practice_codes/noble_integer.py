@@ -3,15 +3,16 @@
 def NobleInt(A):
     A.sort()
     n = len(A)
-    c = 0
+    ans = 0
     for i in range(n):
-        c += 1
-        p = c - i
-        if c == p:
-            return 1
-        else:
-            return -1
+        c = 0
+        for j in range(n):
+            if A[j] < A[i]:
+                c += 1
+        if A[i] == c:
+            ans += 1
+    return ans
 
 
-A = [6,7,5]
+A = [-10, -5, 1, 3, 4, 5, 10]
 print(NobleInt(A))
