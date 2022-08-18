@@ -9,5 +9,5 @@ if n % 2 == 0:
     else:
         print('No')
 else:
-    prtint('No')
+    print('No')
 
