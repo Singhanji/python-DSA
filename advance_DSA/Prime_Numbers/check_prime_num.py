@@ -1,5 +1,5 @@
 # Check if number is Prime or Not 
-# TC: O(N)
+# TC: O(N*N)
 
 
 def prime(A):
