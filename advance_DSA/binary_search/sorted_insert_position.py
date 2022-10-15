@@ -12,7 +12,7 @@ def solve(A,B):
             l = m+1
         else:
             h = m-1
-    return m-1
+    return l
         
 #A = [1, 3, 5, 6]
 #B = 5
