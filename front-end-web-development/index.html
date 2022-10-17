@@ -1,14 +1,18 @@
 <html>
 <head>
 <title> Anjana's Resume Page </title>
+<link rel="stylesheet" href="site.css" /> 
+
 </head>
 <body>
+    <div class="container">
     <header>
-        <h1> Anjana Singh </h1>
-        <img src="/img/Anjana.jpeg" width="200" height="200" alt="Anjana Singh" />
+        <img id="Anji" src="/img/Anjana.jpeg" width="200" height="200" alt="Anjana Singh" />
+        <h1 id="siteName"> Anjana Singh </h1>
         
-        <ul>
-            <li><a href="index.html">Home</a></li>
+        
+        <ul id="menu">
+            <li class="active"><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href ="privacy.html">Privacy</a></li>
         </ul>
@@ -18,11 +22,13 @@
         <p> <strong>Purpose:</strong> This is a resume(or CV) to help me get a job in web development</p>
 
         <h2>Objective</h2>
+        <div class="Objective">
         <div>
             <p>To seek and maintain a full-time position that offers professional challenges utilizing interpersonal skills, excellent time management and problem-solving skills.</p>
         </div>
-        <h2>Skills</h2>
-        <div>
+        <div class="Objective">
+        <h2 class="title"> Skills</h2>
+        <div class="Objective">
             <ul>
                 <li>Python, Flask</li>
                 <li>HTML, CSS, JavaScript</li>
@@ -31,8 +37,8 @@
                 <li>MariaDB</li>
             </ul>
         </div>
-        <h2>Linux Expertise</h2>
-        <div>
+        <h2 class="title"> Linux Expertise</h2>
+        <div class="Objective">
             <ul>
                 <li>Integration of various network-related services like NFS, DNS.</li>
                 <li>Installation and configuration of Apache web server.</li>
@@ -40,18 +46,18 @@
                 <li>Good at writing Shell Scripts.</li>
             </ul>
         </div>
-        <h2>Certifications</h2>
-        <div>
+        <h2 class="title">Certifications</h2>
+        <div class="Objective">
             <ul>
                 <li>Red Hat Certified System Administrator (210-241-477)</li>
                 <li>Stanford - Divide and Conquer, Sorting and Searching, and Randomized Algorithms</li>
                 <li>Pursuing Full Stack Developer course from SCALER (scaler.com)</li>
             </ul>
-        </div>
-        <h2>Professional Experience</h2>
-        <h3>July 2019 – Feb 2020: HiTouch Technologies Pvt. Ltd</h3>
-        <div>
-            <p><strong>Implementation Engineer</strong></p>
+        </div >
+        <h2 >Professional Experience</h2>
+        <h3 class="title">July 2019 – Feb 2020: HiTouch Technologies Pvt. Ltd</h3>
+        <div class="Objective">
+            <p class="title"><strong>Implementation Engineer</strong></p>
             <ul>
                 <li>Worked on the product ERPDaddy.</li>
                 <li>Acted as a liaison between product, IT, and sales teams to understand customer demands.</li>
@@ -65,8 +71,8 @@
                 <li>Contributed to Password management portal written in Python flask framework.</li>
             </ul>
         </div>
-        <div>
-            <h3>April 2018 – Nov 2018: AEGIS</h3>
+        <div class="Objective">
+            <h3 class="title">April 2018 – Nov 2018: AEGIS</h3>
             <p><strong>Senior Executive-Operation</strong></p>
             <ul>
                 <li>Responding to client support requests.</li>
@@ -81,8 +87,8 @@
                 <li>Supported in case handling.</li>
             </ul>
         </div>
-        <h2>Education</h2>
-        <div>
+        <h2 class="title">Education</h2>
+        <div class="Objective">
             <ul>
                 <li>COURSE: Bachelor of Technology (Computer Science)</li>
                 <li>DATE: 7/15/2012 To 7/24/2016</li>
@@ -93,7 +99,8 @@
 
     <aside>
         <h2>Contact Me</h2>
-        <form>
+        <form id="contactForm">
+            <div id="formInfo"></div>
             <div>
                 <label for="fullName">Full Name</label>
             </div>
@@ -130,9 +137,7 @@
     <footer>
         &copy; 2022 Copyright - Anjana Singh
     </footer>
+</div>
 </body>
-   
-
-    
-</body>
+<script src="index.js"></script>
 </html>
